@@ -1,6 +1,6 @@
 {
   "name": "next-forge",
-  "version": "2.18.33",
+  "version": "2.18.34",
   "bin": {
     "next-forge": "./scripts/init.js"
   },
@@ -22,6 +22,7 @@
     "@auto-it/first-time-contributor": "^11.3.0",
     "@biomejs/biome": "1.9.4",
     "@repo/typescript-config": "workspace:*",
+    "supabase": "^2.0.0",
     "turbo": "^2.3.3",
     "typescript": "^5.7.2",
     "ultracite": "^4.1.8"
@@ -29,5 +30,5 @@
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@9.14.4"
+  "packageManager": "pnpm@9.15.0"
 }

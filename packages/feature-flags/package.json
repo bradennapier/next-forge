@@ -1,6 +1,6 @@
 {
   "name": "@repo/feature-flags",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@repo/auth": "workspace:*",
@@ -9,7 +9,7 @@
     "@vercel/flags": "^2.6.3"
   },
   "peerDependencies": {
-    "next": "15.0.1"
+    "next": "15.0.4"
   },
   "devDependencies": {
     "typescript": "^5.7.2",

@@ -38,6 +38,8 @@ next-env.d.ts
 # prisma
 .env
 
+.content-collections
+
 # react.email
 .react-email
 

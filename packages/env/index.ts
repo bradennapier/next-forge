@@ -2,13 +2,17 @@ import { createEnv } from '@t3-oss/env-nextjs';
 import { z } from 'zod';
 
 const server: Parameters<typeof createEnv>[0]['server'] = {
-  CLERK_SECRET_KEY: z.string().min(1).startsWith('sk_'),
-  CLERK_WEBHOOK_SECRET: z.string().min(1).startsWith('whsec_').optional(),
-  RESEND_FROM: z.string().min(1).email(),
   DATABASE_URL: z.string().min(1).url(),
+  RESEND_FROM: z.string().min(1).email(),
   RESEND_TOKEN: z.string().min(1).startsWith('re_'),
-  STRIPE_SECRET_KEY: z.string().min(1).startsWith('sk_'),
+  CLERK_SECRET_KEY: z.string().min(1).startsWith('sk_'),
+
   STRIPE_WEBHOOK_SECRET: z.string().min(1).startsWith('whsec_').optional(),
+  CLERK_WEBHOOK_SECRET: z.string().min(1).startsWith('whsec_').optional(),
+
+
+
+
   BETTERSTACK_API_KEY: z.string().min(1).optional(),
   BETTERSTACK_URL: z.string().min(1).url().optional(),
   ARCJET_KEY: z.string().min(1).startsWith('ajkey_'),
@@ -20,7 +24,7 @@ const server: Parameters<typeof createEnv>[0]['server'] = {
     .or(z.string().min(1).startsWith('testsk_')),
   LIVEBLOCKS_SECRET: z.string().min(1).startsWith('sk_').optional(),
   OPENAI_API_KEY: z.string().min(1).startsWith('sk-').optional(),
-  BASEHUB_TOKEN: z.string().min(1).startsWith('bshb_pk_'),
+  // BASEHUB_TOKEN: z.string().min(1).startsWith('bshb_pk_'),
 
   // Added by Sentry Integration, Vercel Marketplace
   SENTRY_ORG: z.string().min(1).optional(),
@@ -96,5 +100,7 @@ export const env = createEnv({
     NEXT_PUBLIC_POSTHOG_HOST: process.env.NEXT_PUBLIC_POSTHOG_HOST,
     NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL:
       process.env.NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL,
+    NEXT_PUBLIC_SUPABASE_ANON_KEY: process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY,
+    NEXT_PUBLIC_SUPABASE_URL: process.env.NEXT_PUBLIC_SUPABASE_URL,
   },
 });

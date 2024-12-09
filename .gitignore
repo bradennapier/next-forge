@@ -27,6 +27,7 @@ out/
 build
 dist
 
+.content-collections/
 
 # Debug
 npm-debug.log*

@@ -1,6 +1,6 @@
 {
   "name": "@repo/env",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "dependencies": {
     "@t3-oss/env-nextjs": "^0.11.1",
