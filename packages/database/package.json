@@ -5,13 +5,16 @@
   "types": "./index.ts",
   "scripts": {
     "analyze": "prisma generate --no-hints",
-    "build": "prisma generate --no-hints"
+    "build": "prisma generate --no-hints",
+    "start": "supabase start"
   },
   "dependencies": {
     "@neondatabase/serverless": "^0.10.4",
     "@prisma/adapter-neon": "^6.0.1",
     "@prisma/client": "6.0.1",
     "@repo/env": "workspace:*",
+    "@supabase/ssr": "^0.5.2",
+    "@supabase/supabase-js": "^2.47.2",
     "server-only": "^0.0.1",
     "undici": "^7.1.0",
     "ws": "^8.18.0"
@@ -22,6 +25,7 @@
     "@types/ws": "^8.5.13",
     "bufferutil": "^4.0.8",
     "prisma": "6.0.1",
+    "supabase": "^2.0.0",
     "typescript": "^5.7.2"
   }
 }

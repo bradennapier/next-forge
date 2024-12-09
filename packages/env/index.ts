@@ -47,6 +47,9 @@ const client: Parameters<typeof createEnv>[0]['client'] = {
   NEXT_PUBLIC_POSTHOG_KEY: z.string().min(1).startsWith('phc_'),
   NEXT_PUBLIC_POSTHOG_HOST: z.string().min(1).url(),
 
+  NEXT_PUBLIC_SUPABASE_ANON_KEY: z.string(),
+  NEXT_PUBLIC_SUPABASE_URL: z.string().url(),
+
   // Added by Vercel
   NEXT_PUBLIC_VERCEL_PROJECT_PRODUCTION_URL: z.string().min(1),
 };
