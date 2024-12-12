@@ -5,8 +5,7 @@
       "packages/design-system/components/ui/**",
       "packages/design-system/lib/**",
       "packages/design-system/hooks/**",
-      "apps/docs/**/*.json",
-      "packages/env/**"
+      "apps/docs/**/*.json"
     ]
   }
 }

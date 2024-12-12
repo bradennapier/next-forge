@@ -1,6 +1,6 @@
 // biome-ignore lint/correctness/noNodejsModules: Generates sitemap on Node.js
 import fs from 'node:fs';
-import '@repo/cms';
+
 import { env } from '@repo/env';
 import type { MetadataRoute } from 'next';
 

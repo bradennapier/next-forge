@@ -1,29 +1,36 @@
 {
   "name": "@repo/cms",
   "version": "0.0.2",
-  "private": true,
-  "scripts": {
-    "dev": "content-collections build --config ./collections.ts",
-    "build": "content-collections build --config ./collections.ts",
-    "analyze": "content-collections build"
-  },
   "dependencies": {
     "@content-collections/core": "^0.7.3",
     "@content-collections/mdx": "^0.2.0",
-    "@repo/env": "workspace:*",
+    "@repo/env": "0.0.0",
     "fumadocs-core": "^14.6.0",
     "react": "^19.0.0",
     "reading-time": "^1.5.0",
-    "sqip": "1.0.0-alpha.51"
+    "sharp": "^0.33.5",
+    "sqip": "1.0.0-alpha.51",
+    "sqip-plugin-data-uri": "1.0.0-alpha.52",
+    "sqip-plugin-primitive": "1.0.0-alpha.53",
+    "sqip-plugin-svgo": "1.0.0-alpha.54"
   },
   "devDependencies": {
     "@content-collections/cli": "^0.1.6",
-
     "@content-collections/next": "^0.2.4",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "22.10.1",
-    "@types/react": "19.0.1",
-    "@types/react-dom": "^19.0.2",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "next": "15.0.4"
+  },
+  "private": true,
+  "scripts": {
+    "analyze": "content-collections build",
+    "build": "content-collections build --config ./collections.ts",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "content-collections build --config ./collections.ts",
+    "format": "biome lint --write .",
+    "lint": "biome lint .",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   }
 }

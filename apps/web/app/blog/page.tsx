@@ -1,4 +1,4 @@
-import { blog } from '@repo/cms';
+import { blog } from '@/content';
 import type { Blog, WithContext } from '@repo/seo/json-ld';
 import { JsonLd } from '@repo/seo/json-ld';
 import { createMetadata } from '@repo/seo/metadata';

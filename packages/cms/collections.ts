@@ -3,8 +3,10 @@ import { compileMDX } from '@content-collections/mdx';
 import {
   type RehypeCodeOptions,
   rehypeCode,
+  rehypeToc,
   remarkGfm,
   remarkHeading,
+  remarkImage,
 } from 'fumadocs-core/mdx-plugins';
 import readingTime from 'reading-time';
 import { sqip } from 'sqip';
@@ -44,8 +46,8 @@ const posts = defineCollection({
 
     const body = await context.cache(page.content, async () =>
       compileMDX(context, page, {
-        remarkPlugins: [remarkGfm, remarkHeading],
-        rehypePlugins: [[rehypeCode, rehypeCodeOptions]],
+        remarkPlugins: [remarkGfm, remarkHeading, remarkImage],
+        rehypePlugins: [[rehypeCode, rehypeCodeOptions, rehypeToc]],
       })
     );
 
@@ -55,8 +57,13 @@ const posts = defineCollection({
       _slug: page._meta.path,
       readingTime: readingTime(page.content).text,
       body,
-      image: page.image,
-      imageBlur: result.metadata.dataURIBase64 as string,
+
+      imageMetadata: {
+        image: page.image,
+        height: result.metadata.height,
+        width: result.metadata.width,
+        imageBlur: result.metadata.dataURIBase64 as string,
+      },
     };
   },
 });
@@ -73,7 +80,7 @@ const legals = defineCollection({
   transform: async ({ title, ...page }, context) => {
     const body = await context.cache(page.content, async () =>
       compileMDX(context, page, {
-        remarkPlugins: [remarkGfm, remarkHeading],
+        remarkPlugins: [remarkGfm, remarkHeading, remarkImage],
         rehypePlugins: [[rehypeCode, rehypeCodeOptions]],
       })
     );
@@ -82,6 +89,7 @@ const legals = defineCollection({
       ...page,
       _title: title,
       _slug: page._meta.path,
+      readingTime: readingTime(page.content).text,
       body,
     };
   },

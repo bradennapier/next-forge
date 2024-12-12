@@ -1,22 +1,26 @@
 {
   "name": "email",
-  "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "build": "email build",
-    "dev": "email dev --port 3003",
-    "export": "email export"
-  },
+  "version": "0.0.0",
   "dependencies": {
-    "@react-email/components": "0.0.30",
-    "@repo/email": "workspace:*",
-    "react": "19.0.0",
-    "react-email": "3.0.3"
+    "@react-email/components": "0.0.31",
+    "@repo/email": "0.0.0",
+    "react": "^19.0.0",
+    "react-email": "3.0.4"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "22.10.1",
-    "@types/react": "19.0.1",
-    "typescript": "^5.7.2"
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "typescript": "^5"
+  },
+  "private": true,
+  "scripts": {
+    "build": "email build",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "email dev --port 3003",
+    "export": "email export",
+    "format": "biome lint --write .",
+    "lint": "biome lint .",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   }
 }

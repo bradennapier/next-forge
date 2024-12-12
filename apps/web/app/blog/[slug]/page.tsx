@@ -1,6 +1,6 @@
 import { Sidebar } from '@/components/sidebar';
+import { blog } from '@/content';
 import { ArrowLeftIcon } from '@radix-ui/react-icons';
-import { blog } from '@repo/cms';
 import { Body } from '@repo/cms/components/body';
 import { TableOfContents } from '@repo/cms/components/toc';
 import { env } from '@repo/env';
@@ -32,7 +32,7 @@ export const generateMetadata = async ({
   return createMetadata({
     title: post._title,
     description: post.description,
-    image: post.image.url,
+    image: post.image,
   });
 };
 
@@ -68,9 +68,9 @@ const BlogPost = async ({ params }: BlogPostProperties) => {
             ).toString(),
           },
           headline: page._title,
-          image: page.image.url,
+          image: page.image,
           dateModified: page.date,
-          author: page.authors.at(0)?._title,
+          author: page.authors.at(0),
           isAccessibleForFree: true,
         }}
       />
@@ -93,23 +93,23 @@ const BlogPost = async ({ params }: BlogPostProperties) => {
               </p>
               {page.image ? (
                 <Image
-                  src={page.image.url}
-                  width={page.image.width}
-                  height={page.image.height}
-                  alt={page.image.alt ?? ''}
+                  src={page.image}
+                  width={page.imageMetadata.width}
+                  height={page.imageMetadata.height}
+                  alt={page._title ?? ''}
                   className="my-16 h-full w-full rounded-xl"
                   priority
                 />
               ) : undefined}
               <div className="mx-auto max-w-prose">
-                <Body content={page.body.json.content} />
+                <Body content={page.body} />
               </div>
             </div>
           </div>
           <div className="sticky top-24 hidden shrink-0 md:block">
             <Sidebar
-              toc={<TableOfContents data={page.body.json.toc} />}
-              readingTime={`${page.body.readingTime} min read`}
+              toc={<TableOfContents data={page.content} />}
+              readingTime={`${page.readingTime} min read`}
               date={new Date(page.date)}
             />
           </div>

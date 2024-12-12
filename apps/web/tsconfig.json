@@ -1,13 +1,11 @@
 {
-  "extends": [
-    "@repo/typescript-config/nextjs.json",
-    "@repo/cms/typescript-config.json"
-  ],
+  "extends": "@repo/typescript-config/nextjs.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
-      "@repo/*": ["../../packages/*"]
+      "@repo/*": ["../../packages/*"],
+      "@@/content-collections/*": ["./.content-collections/generated/*"]
     }
   },
   "include": [
@@ -15,6 +13,7 @@
     "next.config.ts",
     "**/*.ts",
     "**/*.tsx",
-    ".next/types/**/*.ts"
+    ".next/types/**/*.ts",
+    ".content-collections/generated/**/*.ts"
   ]
 }

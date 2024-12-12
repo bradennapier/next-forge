@@ -1,5 +1,4 @@
-import { allLegals, allPosts } from 'content-collections';
-export * from 'content-collections';
+import { allLegals, allPosts } from '@/.content-collections/generated';
 
 export const blog = {
   postsQuery: null,

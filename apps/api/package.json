@@ -1,35 +1,39 @@
 {
   "name": "api",
-  "private": true,
-  "scripts": {
-    "dev": "concurrently \"pnpm:next\" \"pnpm:stripe\"",
-    "next": "next dev -p 3002 --turbopack",
-    "build": "next build",
-    "start": "next start",
-    "analyze": "ANALYZE=true pnpm build",
-    "stripe": "stripe listen --forward-to localhost:3002/webhooks/stripe"
-  },
   "dependencies": {
-    "@repo/analytics": "workspace:*",
-    "@repo/auth": "workspace:*",
-    "@repo/database": "workspace:*",
-    "@repo/design-system": "workspace:*",
-    "@repo/env": "workspace:*",
-    "@repo/observability": "workspace:*",
-    "@repo/payments": "workspace:*",
-    "@sentry/nextjs": "^8.42.0",
-    "@repo/next-config": "workspace:*",
+    "@repo/analytics": "0.0.0",
+    "@repo/auth": "0.0.0",
+    "@repo/database": "0.0.0",
+    "@repo/design-system": "0.0.0",
+    "@repo/env": "0.0.0",
+    "@repo/next-config": "0.0.0",
+    "@repo/observability": "0.0.0",
+    "@repo/payments": "0.0.0",
+    "@sentry/nextjs": "^8.43.0",
     "next": "15.0.4",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "svix": "^1.43.0"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "22.10.1",
-    "@types/react": "19.0.1",
-    "@types/react-dom": "19.0.1",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "concurrently": "^9.1.0",
-    "typescript": "^5.7.2"
+    "typescript": "^5"
+  },
+  "private": true,
+  "scripts": {
+    "analyze": "ANALYZE=true pnpm build",
+    "build": "next build",
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "dev": "concurrently \"pnpm:next\" \"pnpm:stripe\"",
+    "format": "biome lint --write .",
+    "lint": "biome lint .",
+    "next": "next dev -p 3002 --turbopack",
+    "start": "next start",
+    "stripe": "stripe listen --forward-to localhost:3002/webhooks/stripe",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
   }
 }

@@ -1,34 +1,38 @@
 {
-  "name": "next-forge",
-  "version": "2.18.34",
+  "name": "ai-forge",
+  "version": "0.0.0",
   "bin": {
-    "next-forge": "./scripts/init.js"
+    "next-forge": "scripts/init.mjs"
   },
-  "files": [
-    "scripts/init.js"
-  ],
-  "scripts": {
-    "build": "turbo build",
-    "dev": "turbo dev",
-    "lint": "turbo lint",
-    "test": "turbo test",
-    "analyze": "turbo analyze",
-    "bump-deps": "npx npm-check-updates --deep -u -x react-day-picker && pnpm install",
-    "bump-ui": "npx shadcn@latest add --all --overwrite -c packages/design-system",
-    "migrate": "cd packages/database && npx prisma format && npx prisma generate && npx prisma db push"
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "commander": "^12.1.0",
+    "syncpack": "14.0.0-alpha.1"
   },
   "devDependencies": {
     "@auto-it/all-contributors": "^11.3.0",
     "@auto-it/first-time-contributor": "^11.3.0",
     "@biomejs/biome": "1.9.4",
     "@repo/typescript-config": "workspace:*",
-    "supabase": "^2.0.0",
+    "@turbo/gen": "^2.3.3",
     "turbo": "^2.3.3",
-    "typescript": "^5.7.2",
-    "ultracite": "^4.1.8"
+    "typescript": "^5",
+    "ultracite": "^4.1.11"
   },
   "engines": {
     "node": ">=18"
   },
-  "packageManager": "pnpm@9.15.0"
+  "files": ["scripts/init.mjs"],
+  "packageManager": "pnpm@9.15.0",
+  "scripts": {
+    "analyze": "turbo analyze",
+    "build": "turbo build",
+    "bump-deps": "npx npm-check-updates --deep -u -x react-day-picker && pnpm install",
+    "bump-ui": "npx shadcn@latest add --all --overwrite -c packages/design-system",
+    "clean": "git clean -xdf node_modules",
+    "dev": "turbo dev",
+    "lint": "turbo lint",
+    "migrate": "cd packages/database && npx prisma format && npx prisma generate && npx prisma db push",
+    "test": "turbo test"
+  }
 }

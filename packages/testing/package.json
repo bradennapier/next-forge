@@ -1,11 +1,17 @@
 {
   "name": "@repo/testing",
-  "version": "0.0.1",
-  "private": true,
-  "main": "./index.js",
-  "type": "commonjs",
+  "version": "0.0.0",
   "devDependencies": {
     "@vitejs/plugin-react": "^4.3.4",
     "vitest": "^2.1.8"
-  }
+  },
+  "main": "./index.js",
+  "private": true,
+  "scripts": {
+    "clean": "git clean -xdf .cache .turbo dist node_modules",
+    "format": "biome lint --write .",
+    "lint": "biome lint .",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false"
+  },
+  "type": "commonjs"
 }

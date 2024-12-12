@@ -1,12 +1,14 @@
 {
   "$schema": "https://turbo.build/schema.json",
   "globalDependencies": ["**/.env.*local"],
+  "ui": "tui",
   "tasks": {
     "build": {
       "dependsOn": ["^build", "test"],
       "outputs": [".next/**", "!.next/cache/**"],
       "env": [
         "ARCJET_KEY",
+        "BASEHUB_TOKEN",
         "BETTERSTACK_API_KEY",
         "BETTERSTACK_URL",
         "CLERK_SECRET_KEY",
