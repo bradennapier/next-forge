@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "dependencies": {
     "@arcjet/next": "1.0.0-alpha.34",
-    "@repo/env": "0.0.0"
+    "@repo/env": "workspace:*"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",

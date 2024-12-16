@@ -5,7 +5,7 @@
     "@liveblocks/client": "^2.13.1",
     "@liveblocks/node": "^2.13.1",
     "@liveblocks/react": "^2.13.1",
-    "@repo/env": "0.0.0",
+    "@repo/env": "workspace:*",
     "react": "^19.0.0",
     "server-only": "^0.0.1"
   },

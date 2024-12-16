@@ -22,7 +22,9 @@
   "engines": {
     "node": ">=18"
   },
-  "files": ["scripts/init.mjs"],
+  "files": [
+    "scripts/init.mjs"
+  ],
   "packageManager": "pnpm@9.15.0",
   "scripts": {
     "analyze": "turbo analyze",

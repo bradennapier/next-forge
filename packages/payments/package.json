@@ -2,7 +2,7 @@
   "name": "@repo/payments",
   "version": "0.0.0",
   "dependencies": {
-    "@repo/env": "0.0.0",
+    "@repo/env": "workspace:*",
     "@stripe/agent-toolkit": "^0.2.0",
     "stripe": "^17.4.0"
   },

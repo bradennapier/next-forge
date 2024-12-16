@@ -4,7 +4,7 @@
   "dependencies": {
     "@content-collections/core": "^0.7.3",
     "@content-collections/mdx": "^0.2.0",
-    "@repo/env": "0.0.0",
+    "@repo/env": "workspace:*",
     "fumadocs-core": "^14.6.0",
     "react": "^19.0.0",
     "reading-time": "^1.5.0",

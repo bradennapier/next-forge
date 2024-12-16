@@ -2,9 +2,9 @@
   "name": "@repo/feature-flags",
   "version": "0.0.0",
   "dependencies": {
-    "@repo/analytics": "0.0.0",
-    "@repo/auth": "0.0.0",
-    "@repo/design-system": "0.0.0",
+    "@repo/analytics": "workspace:*",
+    "@repo/auth": "workspace:*",
+    "@repo/design-system": "workspace:*",
     "@vercel/flags": "^2.6.3"
   },
   "devDependencies": {
