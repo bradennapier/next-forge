@@ -5,24 +5,26 @@
     "next-forge": "scripts/init.mjs"
   },
   "dependencies": {
-    "chalk": "^5.3.0",
-    "commander": "^12.1.0",
-    "syncpack": "14.0.0-alpha.1"
+    "chalk": "catalog:",
+    "commander": "catalog:",
+    "syncpack": "^13.0.0"
   },
   "devDependencies": {
-    "@auto-it/all-contributors": "^11.3.0",
-    "@auto-it/first-time-contributor": "^11.3.0",
-    "@biomejs/biome": "1.9.4",
+    "@auto-it/all-contributors": "catalog:",
+    "@auto-it/first-time-contributor": "catalog:",
+    "@biomejs/biome": "catalog:",
     "@repo/typescript-config": "workspace:*",
-    "@turbo/gen": "^2.3.3",
-    "turbo": "^2.3.3",
-    "typescript": "^5",
-    "ultracite": "^4.1.11"
+    "@turbo/gen": "catalog:",
+    "turbo": "catalog:",
+    "typescript": "catalog:",
+    "ultracite": "catalog:"
   },
   "engines": {
     "node": ">=18"
   },
-  "files": ["scripts/init.mjs"],
+  "files": [
+    "scripts/init.mjs"
+  ],
   "packageManager": "pnpm@9.15.0",
   "scripts": {
     "analyze": "turbo analyze",

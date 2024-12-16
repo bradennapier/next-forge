@@ -1,7 +1,7 @@
 {
   "name": "docs",
   "devDependencies": {
-    "typescript": "^5"
+    "typescript": "catalog:"
   },
   "private": true,
   "scripts": {

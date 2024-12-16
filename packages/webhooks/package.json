@@ -2,13 +2,13 @@
   "name": "@repo/webhooks",
   "version": "0.0.0",
   "dependencies": {
-    "@repo/auth": "0.0.0",
-    "@repo/env": "0.0.0",
-    "svix": "^1.43.0"
+    "@repo/auth": "workspace:*",
+    "@repo/env": "workspace:*",
+    "svix": "catalog:"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "typescript": "^5"
+    "typescript": "catalog:"
   },
   "private": true,
   "scripts": {

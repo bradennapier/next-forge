@@ -2,26 +2,26 @@
   "name": "@repo/cms",
   "version": "0.0.2",
   "dependencies": {
-    "@content-collections/core": "^0.7.3",
-    "@content-collections/mdx": "^0.2.0",
-    "@repo/env": "0.0.0",
-    "fumadocs-core": "^14.6.0",
-    "react": "^19.0.0",
-    "reading-time": "^1.5.0",
-    "sharp": "^0.33.5",
-    "sqip": "1.0.0-alpha.51",
-    "sqip-plugin-data-uri": "1.0.0-alpha.52",
-    "sqip-plugin-primitive": "1.0.0-alpha.53",
-    "sqip-plugin-svgo": "1.0.0-alpha.54"
+    "@content-collections/core": "catalog:",
+    "@content-collections/mdx": "catalog:",
+    "@repo/env": "workspace:*",
+    "fumadocs-core": "catalog:",
+    "react": "catalog:",
+    "reading-time": "catalog:",
+    "sharp": "catalog:",
+    "sqip": "catalog:",
+    "sqip-plugin-data-uri": "catalog:",
+    "sqip-plugin-primitive": "catalog:",
+    "sqip-plugin-svgo": "catalog:"
   },
   "devDependencies": {
-    "@content-collections/cli": "^0.1.6",
-    "@content-collections/next": "^0.2.4",
+    "@content-collections/cli": "catalog:",
+    "@content-collections/next": "catalog:",
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "next": "15.0.4"
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "next": "15.1.0"
   },
   "private": true,
   "scripts": {

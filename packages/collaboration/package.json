@@ -2,18 +2,18 @@
   "name": "@repo/collaboration",
   "version": "0.0.0",
   "dependencies": {
-    "@liveblocks/client": "^2.13.1",
-    "@liveblocks/node": "^2.13.1",
-    "@liveblocks/react": "^2.13.1",
-    "@repo/env": "0.0.0",
-    "react": "^19.0.0",
-    "server-only": "^0.0.1"
+    "@liveblocks/client": "catalog:",
+    "@liveblocks/node": "catalog:",
+    "@liveblocks/react": "catalog:",
+    "@repo/env": "workspace:*",
+    "react": "catalog:",
+    "server-only": "catalog:"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "@types/react-dom": "^19"
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:"
   },
   "private": true,
   "scripts": {

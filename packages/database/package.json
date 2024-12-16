@@ -2,22 +2,22 @@
   "name": "@repo/database",
   "version": "0.0.0",
   "dependencies": {
-    "@neondatabase/serverless": "^0.10.4",
-    "@prisma/adapter-neon": "^6.0.1",
-    "@prisma/client": "6.0.1",
-    "@repo/env": "0.0.0",
-    "server-only": "^0.0.1",
-    "undici": "^7.1.0",
-    "ws": "^8.18.0"
+    "@neondatabase/serverless": "catalog:",
+    "@prisma/adapter-neon": "catalog:",
+    "@prisma/client": "catalog:",
+    "@repo/env": "workspace:*",
+    "server-only": "catalog:",
+    "undici": "catalog:",
+    "ws": "catalog:"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22",
-    "@types/ws": "^8.5.13",
-    "bufferutil": "^4.0.8",
-    "prisma": "6.0.1",
-    "supabase": "^2.0.0",
-    "typescript": "^5"
+    "@types/node": "catalog:",
+    "@types/ws": "catalog:",
+    "bufferutil": "catalog:",
+    "prisma": "catalog:",
+    "supabase": "catalog:",
+    "typescript": "catalog:"
   },
   "main": "./index.ts",
   "scripts": {

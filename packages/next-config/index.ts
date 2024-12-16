@@ -9,6 +9,13 @@ import type { NextConfig } from 'next';
 import { createSecureHeaders } from 'next-secure-headers';
 
 const baseConfig: NextConfig = {
+  reactStrictMode: true,
+
+  experimental: {
+    // ppr: 'incremental',
+    authInterrupts: true,
+  },
+
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [

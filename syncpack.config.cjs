@@ -16,7 +16,7 @@ const config = {
     {
       label: 'Use workspace protocol when developing local packages',
       dependencies: ['@repo/*', '@your-repo/node-client', 'dashboard-ui'],
-      dependencyTypes: ['dev'],
+      dependencyTypes: ['dev', 'prod'],
       pinVersion: 'workspace:*',
     },
   ],

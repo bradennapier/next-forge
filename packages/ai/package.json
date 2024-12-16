@@ -2,18 +2,18 @@
   "name": "@repo/ai",
   "version": "0.0.0",
   "dependencies": {
-    "@ai-sdk/openai": "^1.0.8",
-    "@repo/env": "0.0.0",
-    "ai": "^4.0.14",
-    "react": "^19.0.0",
-    "react-markdown": "^9.0.1",
-    "tailwind-merge": "^2.5.5"
+    "@ai-sdk/openai": "catalog:",
+    "@repo/env": "workspace:*",
+    "ai": "catalog:",
+    "react": "catalog:",
+    "react-markdown": "catalog:",
+    "tailwind-merge": "catalog:"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "@types/react-dom": "^19"
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:"
   },
   "private": true,
   "scripts": {

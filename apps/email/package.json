@@ -1,17 +1,17 @@
 {
   "name": "email",
-  "version": "0.0.0",
+  "version": "0.2.6",
   "dependencies": {
-    "@react-email/components": "0.0.31",
-    "@repo/email": "0.0.0",
-    "react": "^19.0.0",
-    "react-email": "3.0.4"
+    "@react-email/components": "catalog:",
+    "@repo/email": "workspace:*",
+    "react": "catalog:",
+    "react-email": "catalog:"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "typescript": "^5"
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "typescript": "catalog:"
   },
   "private": true,
   "scripts": {

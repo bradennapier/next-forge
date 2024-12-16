@@ -1,27 +1,27 @@
 {
   "name": "api",
   "dependencies": {
-    "@repo/analytics": "0.0.0",
-    "@repo/auth": "0.0.0",
-    "@repo/database": "0.0.0",
-    "@repo/design-system": "0.0.0",
-    "@repo/env": "0.0.0",
-    "@repo/next-config": "0.0.0",
-    "@repo/observability": "0.0.0",
-    "@repo/payments": "0.0.0",
-    "@sentry/nextjs": "^8.43.0",
-    "next": "15.0.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "svix": "^1.43.0"
+    "@repo/analytics": "workspace:*",
+    "@repo/auth": "workspace:*",
+    "@repo/database": "workspace:*",
+    "@repo/design-system": "workspace:*",
+    "@repo/env": "workspace:*",
+    "@repo/next-config": "workspace:*",
+    "@repo/observability": "workspace:*",
+    "@repo/payments": "workspace:*",
+    "@sentry/nextjs": "catalog:",
+    "next": "15.1.0",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "svix": "catalog:"
   },
   "devDependencies": {
     "@repo/typescript-config": "workspace:*",
-    "@types/node": "^22",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "concurrently": "^9.1.0",
-    "typescript": "^5"
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "concurrently": "catalog:",
+    "typescript": "catalog:"
   },
   "private": true,
   "scripts": {
